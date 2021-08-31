@@ -129,7 +129,7 @@ async def playlist(client, message):
         return    
     queue = que.get(message.chat.id)
     if not queue:
-        await message.reply_text("**Not Playing a song**")
+        await message.reply_text("**Şu anda şarkı çalmıyor**")
     temp = []
     for t in queue:
         temp.append(t)
@@ -446,7 +446,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 **Processing Song**")
+    lel = await message.reply("🔄 **Şarkı söyleniyor**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -530,8 +530,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/Grup_Anime_Chat"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/Smailesi"),
+                    InlineKeyboardButton("⛑ Channel", url="https://t.me/UcretliBotlar"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -577,8 +577,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/grup_anime_chat"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/smailesi"),
+                    InlineKeyboardButton("⛑ Channel", url="https://t.me/ucretlibotlar"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -656,8 +656,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/grup_anime_chat"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/smailesi"),
+                    InlineKeyboardButton("⛑ Channel", url="https://t.me/ucretlibotlar"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -759,7 +759,7 @@ async def ytplay(_, message: Message):
             f"<i>{user.first_name} got banned from this Group, Ask admin to send command `/play` for the first time or add @{ASSISTANT_NAME} manually</i>"
         )
         return
-    await lel.edit("🔎 **Looking for a Song**")
+    await lel.edit("🔎 **Senin gibi güzel şarkı arıyorum**")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -794,8 +794,8 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/grup_anime_chat"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/smailesi"),
+                    InlineKeyboardButton("⛑ Channel", url="https://t.me/ucretlibotlar"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -929,7 +929,7 @@ async def deezer(client: Client, message_: Message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="⛑ Channel", url="https://t.me/userlazyxbot")],
+            [InlineKeyboardButton(text="⛑ Channel", url="https://t.me/Ucretlibotlar")],
         ]
     )
     file_path = await convert(wget.download(url))
@@ -1024,8 +1024,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/grup_anime_chat"),
-                    InlineKeyboardButton("🛡️ Channel", url="https://t.me/userlazyxbot"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/smailesi"),
+                    InlineKeyboardButton("🛡️ Channel", url="https://t.me/ucretlibotlar"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
